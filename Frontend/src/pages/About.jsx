@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { assets } from '../assets/frontend_assets/Assets';
 import Title from '../components/Title';
-import  Newsletter  from '../components/Newsletter';
+import Newsletter from '../components/Newsletter';
 
 const About = () => {
   const navigate = useNavigate();
@@ -61,6 +61,34 @@ const About = () => {
         </div>
       </div>
 
+      {/* Meet Our Team Section */}
+      <div className='w-full'>
+        <Title text1='Meet' text2='Our Team' />
+        <div className='flex flex-col md:flex-row justify-around items-start mt-8 gap-8'>
+          {/* Team Member 1 */}
+          <TeamMemberCard
+            name='Alice Johnson'
+            role='Founder & CEO'
+            description='Alice is the visionary behind our store, with a passion for quality and customer satisfaction.'
+            image={assets.Member1} // Add the appropriate image path
+          />
+          {/* Team Member 2 */}
+          <TeamMemberCard
+            name='John Smith'
+            role='Marketing Director'
+            description='John drives our marketing strategies and ensures our brand reaches the right audience.'
+            image={assets.Member2} // Add the appropriate image path
+          />
+          {/* Team Member 3 */}
+          <TeamMemberCard
+            name='Emily Davis'
+            role='Customer Service Manager'
+            description='Emily is dedicated to providing exceptional service and support to our valued customers.'
+            image={assets.Member3} // Add the appropriate image path
+          />
+        </div>
+      </div>
+
       {/* Divider */}
       <div className='w-full border-t border-gray-300 my-8'></div>
       
@@ -74,6 +102,16 @@ const About = () => {
 const FeatureCard = ({ title, description }) => (
   <div className='w-full md:w-1/3 text-center'>
     <h3 className='text-2xl font-semibold text-orange-600'>{title}</h3>
+    <p className='text-gray-700 mt-2'>{description}</p>
+  </div>
+);
+
+// Reusable Component for Team Member Cards
+const TeamMemberCard = ({ name, role, description, image }) => (
+  <div className='w-full md:w-1/3 text-center bg-gradient-to-br from-orange-100 via-white to-orange-50 p-6 rounded-md shadow-lg'>
+    <img src={image} alt={name} className='w-24 h-24 rounded-full mx-auto mb-4' />
+    <h3 className='text-xl font-semibold text-gray-800'>{name}</h3>
+    <p className='text-gray-600'>{role}</p>
     <p className='text-gray-700 mt-2'>{description}</p>
   </div>
 );

@@ -7,6 +7,12 @@ const Contact = () => {
     <div className='flex flex-col items-center w-[90%] sm:max-w-5xl m-auto mt-14 gap-16 text-gray-800'>
       {/* Title Section */}
       <Title text1='CONTACT' text2='US' />
+
+      {/* Banner Section */}
+      <div className='w-full bg-gradient-to-br from-orange-500 to-orange-400 p-8 rounded-md text-center shadow-lg'>
+        <h2 className='text-white text-2xl font-bold'>We’re Here to Help!</h2>
+        <p className='text-white mt-2'>Your questions and feedback are important to us. Reach out anytime!</p>
+      </div>
       
       {/* Contact Information Section */}
       <div className='flex flex-col md:flex-row items-center justify-around w-full gap-8'>
@@ -92,31 +98,6 @@ const Contact = () => {
             Submit Feedback
           </button>
         </form>
-      </div>
-
-      {/* Team Members Section */}
-      <div className='w-full bg-gradient-to-br from-white to-orange-50 p-6 rounded-md shadow-lg'>
-        <h3 className='text-xl font-semibold text-gray-800'>Meet Our Team</h3>
-        <div className='flex flex-col md:flex-row justify-around mt-4'>
-          <div className='flex flex-col items-center'>
-            <img
-              src={assets.team_member1} // Replace with your team member image path
-              alt='Team Member 1'
-              className='w-24 h-24 rounded-full shadow-md'
-            />
-            <p className='font-semibold mt-2'>John Doe</p>
-            <p className='text-gray-600'>Customer Support</p>
-          </div>
-          <div className='flex flex-col items-center'>
-            <img
-              src={assets.team_member2} // Replace with your team member image path
-              alt='Team Member 2'
-              className='w-24 h-24 rounded-full shadow-md'
-            />
-            <p className='font-semibold mt-2'>Jane Smith</p>
-            <p className='text-gray-600'>Sales Manager</p>
-          </div>
-        </div>
       </div>
 
       {/* Call to Action Section */}
